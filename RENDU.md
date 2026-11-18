@@ -2,17 +2,18 @@
 
 > Complétez ce fichier au fil de l'atelier, puis faites un commit et un push (voir la section « Rendu » du README).
 
-**Nom / Prénom :**
-**Groupe :**
+**Nom / Prénom : ABUR Kubra**
+**Groupe : RS2**
 
 ---
 
 ## Exercice 1 — Cluster
 
 1. Combien de nœuds affiche `kubectl get nodes` ? Quel est le rôle de chacun ?
-   >
+   >La commande affiche 3 noeux : 
+   > k3d-lab-agent-0 (worker), k3d-lab-agent-1 (worker) et k3d-lab-server-0 (control-plane)
 2. Que montre `docker ps` ? Qu'est-ce qu'un « nœud » dans k3d, concrètement ?
-   >
+   > docker ps montre les containers en cours d'execution, on voit que les 3 noeux dans le get nodes sont dans le docker ps, donc chaque noeud Kub est un conteneur
 
 ## Exercice 2 — Premier déploiement
 
