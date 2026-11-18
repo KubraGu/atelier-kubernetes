@@ -10,17 +10,17 @@
 ## Exercice 1 — Cluster
 
 1. Combien de nœuds affiche `kubectl get nodes` ? Quel est le rôle de chacun ?
-   >La commande affiche 3 noeux : 
-   > k3d-lab-agent-0 (worker), k3d-lab-agent-1 (worker) et k3d-lab-server-0 (control-plane)
+   La commande affiche 3 noeux : 
+   k3d-lab-agent-0 (worker), k3d-lab-agent-1 (worker) et k3d-lab-server-0 (control-plane)
 2. Que montre `docker ps` ? Qu'est-ce qu'un « nœud » dans k3d, concrètement ?
-   > docker ps montre les containers en cours d'execution, on voit que les 3 noeux dans le get nodes sont dans le docker ps, donc chaque noeud Kub est un conteneur
+   docker ps montre les containers en cours d'execution, on voit que les 3 noeux dans le get nodes sont dans le docker ps, donc chaque noeud Kub est un conteneur
 
 ## Exercice 2 — Premier déploiement
 
 3. Quels objets Kubernetes ont été créés par `kubectl create deployment` ? (indice : `kubectl get all`)
-   >La commande crée un Deployment, qui crée automatiquement un ReplicaSet et un Pod contenant le conteneur Nginx
+   La commande crée un Deployment, qui crée automatiquement un ReplicaSet et un Pod contenant le conteneur Nginx
 4. Vous avez supprimé le pod `web-...` : que s'est-il passé, et pourquoi ?
-   >Après la suppression du Pod, Kubernetes en a automatiquement créé un nouveau. C'est parce que le Deployment souhaite toujours avoir un Pod en fonctionnement
+   Après la suppression du Pod, Kubernetes en a automatiquement créé un nouveau. C'est parce que le Deployment souhaite toujours avoir un Pod en fonctionnement
 
 ## Exercice 3 — Modifier un conteneur en direct
 
