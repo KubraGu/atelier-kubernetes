@@ -57,9 +57,9 @@ site-68f8f45b86-v7rh9   1/1     Running   0          10s     10.42.0.9   k3d-lab
 ## Exercice 6 — Portainer & Mario
 
 12. URL publique de votre Mario :
-    >
+    >https://probable-xylophone-w6rw6qrj45rhjg7-8585.app.github.dev/
 13. Retrouvez le Deployment `mario` en ligne de commande. Portainer et `kubectl` parlent-ils au même composant ? Lequel ?
-    >
+    >Portainer utilise une interface graphique, alors qu'en ligne de commande, on utilise des commandes kubectl
 
 ## Bonus (facultatif)
 
