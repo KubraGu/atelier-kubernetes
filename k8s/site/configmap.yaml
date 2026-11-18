@@ -13,6 +13,6 @@ data:
       <body>
         <h1>Bienvenue sur mon site</h1>
         <p>Réalisé par ABUR Kubra, RS2</p>
-        <p>Servi par Kubernetes.</p>
+        <p>Mise à jour avec ConfigMap.</p>
       </body>
     </html>
