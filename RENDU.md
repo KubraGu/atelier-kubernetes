@@ -68,4 +68,4 @@ site-68f8f45b86-v7rh9   1/1     Running   0          10s     10.42.0.9   k3d-lab
 
 ---
 
-**Score obtenu avec `./scripts/check.sh` :** ... / ...
+**Score obtenu avec `./scripts/check.sh` :** 15 / 18
