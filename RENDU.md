@@ -40,12 +40,19 @@
 
 9. Sur quels nœuds se trouvent vos 3 réplicas ? Collez la sortie de `kubectl get pods -l app=site -o wide`.
    ```
-
+@KubraGu ➜ /workspaces/atelier-kubernetes (main) $ kubectl get pods -l app=site -o wide
+NAME                    READY   STATUS    RESTARTS   AGE     IP          NODE               NOMINATED NODE   READINESS GATES
+site-68f8f45b86-279zf   1/1     Running   0          10s     10.42.2.5   k3d-lab-agent-1    <none>           <none>
+site-68f8f45b86-cr5j5   1/1     Running   0          4m35s   10.42.1.8   k3d-lab-agent-0    <none>           <none>
+site-68f8f45b86-v7rh9   1/1     Running   0          10s     10.42.0.9   k3d-lab-server-0   <none>           <none>
    ```
 10. Avec l'image `nginx:9.99`, quel statut avait le pod ? Quelle commande vous a donné la cause ?
-    >
+    >site-d474c8465-hxrzc    0/1     ErrImagePull   0          4s
+    >Warning  Failed     7s (x3 over 47s)   kubelet            spec.containers{nginx}: Failed to pull image "nginx:9.99": rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/nginx:9.99": failed to resolve reference "docker.io/library/nginx:9.99": docker.io/library/nginx:9.99: not found
+  Warning  Failed     7s (x3 over 47s)   kubelet            spec.containers{nginx}: Error: ErrImagePull
+    >Le nouveau Pod avait le statut ErrImagePull, puis ImagePullBackOff. L'image nginx:9.99 existe pas et peut pas être téléchargée. La commande kubectl describe pod permet de trouver la cause dans la section Events
 11. Pendant la panne, le site restait-il accessible ? Pourquoi ?
-    >
+    >Oui, le site reste accessible pendant la panne, car les trois anciens Pods fonctionnent toujours. Le nouveau Pod démarre pas à cause de l'image incorrecte, mais les anciens continuent de recevoir les requêtes
 
 ## Exercice 6 — Portainer & Mario
 
