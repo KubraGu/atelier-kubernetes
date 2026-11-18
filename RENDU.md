@@ -18,9 +18,9 @@
 ## Exercice 2 — Premier déploiement
 
 3. Quels objets Kubernetes ont été créés par `kubectl create deployment` ? (indice : `kubectl get all`)
-   >
+   >La commande crée un Deployment, qui crée automatiquement un ReplicaSet et un Pod contenant le conteneur Nginx
 4. Vous avez supprimé le pod `web-...` : que s'est-il passé, et pourquoi ?
-   >
+   >Après la suppression du Pod, Kubernetes en a automatiquement créé un nouveau. C'est parce que le Deployment souhaite toujours avoir un Pod en fonctionnement
 
 ## Exercice 3 — Modifier un conteneur en direct
 
